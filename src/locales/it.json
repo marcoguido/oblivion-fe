@@ -7,6 +7,10 @@
       "links": {
         "home": "Home",
         "about": "Chi sono"
+      },
+      "theme": {
+        "onBright": "Attiva il tema chiaro",
+        "onDark": "Attiva il tema scuro"
       }
     },
     "pages": {

@@ -5,8 +5,10 @@
     <v-overlay
       absolute
       align="center"
-      justify="center"
       class="welcome-slide__overlay"
+      :opacity="overlayOpacity"
+      :dark="darkThemeVariant"
+      justify="center"
     >
       <h1>
         {{ siteTitle }}
@@ -17,10 +19,9 @@
     </v-overlay>
     <vue-particles
       class="full-viewport"
-      color="#dedede"
       :line-linked="true"
       :line-opacity="0.7"
-      lines-color="#dedede"
+      :lines-color="particlesColor"
       :lines-distance="150"
       :lines-width="1"
       :move-speed="3"
@@ -39,7 +40,25 @@ export default {
     return {
       sitePunchline: this.subtitle || this.$vuetify.lang.t('$vuetify.punchline'),
       siteTitle: this.title || this.$vuetify.lang.t('$vuetify.title'),
+      overlayOpacity: 0.46,
+      particlesColor: '#dedede',
     };
+  },
+  computed: {
+    darkThemeVariant() {
+      return this.$vuetify.theme.dark;
+    },
+  },
+  watch: {
+    darkThemeVariant(isDark) {
+      if (isDark) {
+        this.overlayOpacity = 0.46;
+        this.particlesColor = '#dedede';
+      } else {
+        this.overlayOpacity = 0.20;
+        this.particlesColor = '#000';
+      }
+    },
   },
   props: {
     title: {

@@ -7,6 +7,10 @@
       "links": {
         "home": "Home",
         "about": "Who I am"
+      },
+      "theme": {
+        "onBright": "Activate bright theme",
+        "onDark": "Activate dark theme"
       }
     },
     "pages": {

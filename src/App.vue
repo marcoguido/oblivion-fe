@@ -1,8 +1,10 @@
 <template>
   <v-app>
     <v-content>
-      <NavigationBar
+      <navigation-bar
         :links="navigationLinks"
+        title="Oblivion"
+        @themeChanged="updateUiTheme"
       />
       <router-view />
       <Footer />
@@ -11,11 +13,18 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Footer from './components/layout/Footer.vue';
 import NavigationBar from './components/layout/NavigationBar.vue';
 
 export default {
   components: { NavigationBar, Footer },
+  computed: {
+    ...mapGetters({
+      toolbarStatus: 'getToolbarStatus',
+      isThemeDark: 'isThemeDark',
+    }),
+  },
   data() {
     return {
       navigationLinks: [
@@ -33,6 +42,18 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    this.$vuetify.theme.dark = this.isThemeDark;
+  },
+  methods: {
+    updateUiTheme(toBrightTheme) {
+      this.$store
+        .dispatch('toggleApplicationTheme', toBrightTheme)
+        .then(() => {
+          this.$vuetify.theme.dark = this.isThemeDark;
+        });
+    },
   },
 };
 </script>
