@@ -122,5 +122,6 @@ export default {
 
 <style scoped lang="sass">
   .navigation-bar
+    opacity: .85
     z-index: 10
 </style>
