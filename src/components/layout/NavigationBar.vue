@@ -47,8 +47,9 @@
           v-slot:activator="{ on }"
         >
           <v-btn
-            text
+            class="no-background"
             @click="changeUiTheme(true)"
+            text
           >
             <v-icon
               v-on="on"
@@ -70,8 +71,9 @@
           v-slot:activator="{ on }"
         >
           <v-btn
-            text
+            class="no-background"
             @click="changeUiTheme(false)"
+            text
           >
             <v-icon
               v-on="on"
