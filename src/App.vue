@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <v-content>
-      <navigation-bar
+      <navigation-component
         :links="navigationLinks"
-        title="Oblivion"
+        :title="siteTitle"
         @themeChanged="updateUiTheme"
       />
       <router-view />
@@ -15,10 +15,10 @@
 <script>
 import { mapGetters } from 'vuex';
 import Footer from './components/layout/Footer.vue';
-import NavigationBar from './components/layout/NavigationBar.vue';
+import NavigationComponent from './components/layout/NavigationComponent.vue';
 
 export default {
-  components: { NavigationBar, Footer },
+  components: { NavigationComponent, Footer },
   computed: {
     ...mapGetters({
       toolbarStatus: 'getToolbarStatus',
@@ -27,6 +27,7 @@ export default {
   },
   data() {
     return {
+      siteTitle: process.env.VUE_APP_SITE_TITLE,
       navigationLinks: [
         {
           name: this.$vuetify.lang.t('$vuetify.navigation.links.home'),
