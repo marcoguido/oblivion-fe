@@ -19,11 +19,12 @@
     </v-overlay>
     <vue-particles
       class="full-viewport"
+      :hover-effect="false"
       :line-linked="true"
       :line-opacity="0.7"
-      :lines-color="particlesColor"
+      :lines-color="linesColor"
       :lines-distance="150"
-      :lines-width="1"
+      :lines-width="2"
       :move-speed="3"
       :particle-opacity="1"
       :particle-size="4"
@@ -41,7 +42,7 @@ export default {
       sitePunchline: this.subtitle || this.$vuetify.lang.t('$vuetify.punchline'),
       siteTitle: this.title || this.$vuetify.lang.t('$vuetify.title'),
       overlayOpacity: 0.46,
-      particlesColor: '#dedede',
+      linesColor: '#777',
     };
   },
   computed: {
@@ -51,13 +52,9 @@ export default {
   },
   watch: {
     darkThemeVariant(isDark) {
-      if (isDark) {
-        this.overlayOpacity = 0.46;
-        this.particlesColor = '#dedede';
-      } else {
-        this.overlayOpacity = 0.20;
-        this.particlesColor = '#000';
-      }
+      this.overlayOpacity = isDark
+        ? 0.46
+        : 0.20;
     },
   },
   props: {
