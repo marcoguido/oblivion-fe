@@ -1,12 +1,17 @@
 <template>
   <v-app>
-    <v-content>
+    <v-content
+      v-scroll="scrollHandler"
+    >
       <navigation-component
         :links="navigationLinks"
         :title="siteTitle"
+        :transparent-toolbar="transparentNavigationToolbar"
         @themeChanged="updateUiTheme"
       />
-      <router-view />
+
+      <router-view/>
+
       <Footer />
     </v-content>
   </v-app>
@@ -28,6 +33,7 @@ export default {
   data() {
     return {
       siteTitle: process.env.VUE_APP_SITE_TITLE,
+      transparentNavigationToolbar: true,
       navigationLinks: [
         {
           name: this.$vuetify.lang.t('$vuetify.navigation.links.about'),
@@ -42,6 +48,9 @@ export default {
     this.$vuetify.theme.dark = this.isThemeDark;
   },
   methods: {
+    scrollHandler(event) {
+      this.transparentNavigationToolbar = event.target.scrollingElement.scrollTop < 56;
+    },
     updateUiTheme(toBrightTheme) {
       this.$store
         .dispatch('toggleApplicationTheme', toBrightTheme)

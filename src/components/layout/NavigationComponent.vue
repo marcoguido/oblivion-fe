@@ -3,11 +3,11 @@
     class="navigation-component"
   >
     <v-app-bar
+      class="navigation-component__bar"
+      :class="{ transparent: transparentToolbar }"
       fixed
       flat
-      class="navigation-component__bar transparent"
       tile
-      elevate-on-scroll
     >
       <v-app-bar-nav-icon
         class="ma-0"
@@ -193,6 +193,10 @@ export default {
       type: String,
       required: false,
       default: '',
+    },
+    transparentToolbar: {
+      type: Boolean,
+      required: true,
     },
     links: {
       type: Array,
