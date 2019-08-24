@@ -1,5 +1,6 @@
 <template>
   <v-container
+    class="navigation-component-margin"
     pt-0
     fluid
   >
