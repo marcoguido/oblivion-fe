@@ -39,5 +39,7 @@ export default new Vuex
         }
       },
     },
-    plugins: [createPersistedState()],
+    plugins: [
+      createPersistedState({ key: process.env.VUE_APP_STORAGE_PERSIST_KEY }),
+    ],
   });
