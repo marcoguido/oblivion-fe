@@ -5,17 +5,18 @@
     <v-app-bar
       fixed
       flat
-      class="navigation-component__bar elevation-0 transparent"
-      :collapse-on-scroll="toolbarStatus"
+      class="navigation-component__bar transparent"
       tile
+      elevate-on-scroll
     >
       <v-app-bar-nav-icon
+        class="ma-0"
         @click="drawer = !drawer"
-      >
-      </v-app-bar-nav-icon>
+        v-if="$vuetify.breakpoint.smAndDown"
+      />
 
       <v-toolbar-title
-        class="hidden-xs-only"
+        v-if="$vuetify.breakpoint.mdAndUp"
       >
         <v-btn
           class="no-background"
@@ -41,7 +42,8 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        class="no-background hidden-sm-and-up"
+        v-if="$vuetify.breakpoint.smAndDown"
+        class="no-background"
         text
         tile
         :to="{ name: 'home' }"
@@ -59,7 +61,7 @@
 
       <v-toolbar-items>
         <v-btn
-          v-show="!toolbarStatus"
+          v-show="$vuetify.breakpoint.mdAndUp"
           v-for="(link, index) in links"
           :to="link.route"
           :key="index"
@@ -69,7 +71,6 @@
         </v-btn>
 
         <v-tooltip
-          v-if="$vuetify.theme.dark"
           bottom
           z-index="15"
         >
@@ -78,42 +79,31 @@
           >
             <v-btn
               class="no-background"
-              @click="changeUiTheme(true)"
+              @click="changeUiTheme($vuetify.theme.dark)"
               text
             >
               <v-icon
+                v-if="$vuetify.theme.dark"
+                v-on="on"
+              >
+                wb_sunny
+              </v-icon>
+              <v-icon
+                v-else
                 v-on="on"
               >
                 brightness_2
               </v-icon>
             </v-btn>
           </template>
-          <span>
+          <span
+            v-if="$vuetify.theme.dark"
+          >
             {{ this.$vuetify.lang.t('$vuetify.navigation.theme.onBright') }}
           </span>
-        </v-tooltip>
-
-        <v-tooltip
-          v-else
-          bottom
-          z-index="15"
-        >
-          <template
-            v-slot:activator="{ on }"
+          <span
+            v-else
           >
-            <v-btn
-              class="no-background"
-              @click="changeUiTheme(false)"
-              text
-            >
-              <v-icon
-                v-on="on"
-              >
-                wb_sunny
-              </v-icon>
-            </v-btn>
-          </template>
-          <span>
             {{ this.$vuetify.lang.t('$vuetify.navigation.theme.onDark') }}
           </span>
         </v-tooltip>
@@ -125,6 +115,7 @@
       class="navigation-component__drawer"
       elevation="12"
       width="256"
+      tile
     >
       <v-navigation-drawer
         v-model="drawer"
@@ -148,7 +139,7 @@
 
           <v-list-item-content>
             <v-list-item-title>
-              {{ title }}
+              {{ $vuetify.lang.t('$vuetify.navigation.links.home') }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>

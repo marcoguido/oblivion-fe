@@ -6,7 +6,7 @@
       absolute
       align="center"
       class="welcome-slide__overlay"
-      :opacity="overlayOpacity"
+      :opacity="0.2"
       :dark="darkThemeVariant"
       justify="center"
     >
@@ -22,7 +22,7 @@
       :hover-effect="false"
       :line-linked="true"
       :line-opacity="0.7"
-      :lines-color="linesColor"
+      lines-color="#777"
       :lines-distance="150"
       :lines-width="2"
       :move-speed="3"
@@ -41,20 +41,11 @@ export default {
     return {
       sitePunchline: this.subtitle || this.$vuetify.lang.t('$vuetify.punchline'),
       siteTitle: this.title || this.$vuetify.lang.t('$vuetify.title'),
-      overlayOpacity: 0.46,
-      linesColor: '#777',
     };
   },
   computed: {
     darkThemeVariant() {
       return this.$vuetify.theme.dark;
-    },
-  },
-  watch: {
-    darkThemeVariant(isDark) {
-      this.overlayOpacity = isDark
-        ? 0.46
-        : 0.20;
     },
   },
   props: {

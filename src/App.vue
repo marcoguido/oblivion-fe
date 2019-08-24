@@ -30,12 +30,6 @@ export default {
       siteTitle: process.env.VUE_APP_SITE_TITLE,
       navigationLinks: [
         {
-          name: this.$vuetify.lang.t('$vuetify.navigation.links.home'),
-          route: {
-            name: 'home',
-          },
-        },
-        {
           name: this.$vuetify.lang.t('$vuetify.navigation.links.about'),
           route: {
             name: 'about',

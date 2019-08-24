@@ -11,6 +11,7 @@
       <v-img
         alt="Author profile picture"
         class="site-presentation-avatar ma-auto"
+        :class="{ 'site-presentation-avatar--black-border': !$vuetify.theme.dark }"
         :max-height="windowWidth < 960 ? 320 : 600"
         :max-width="windowWidth < 960 ? 320 : 600"
         :src="gravatarSrc"
@@ -128,4 +129,7 @@ export default {
   &-avatar
     border: 5px solid #fff
     border-radius: 50%
+
+    &--black-border
+      border: 5px solid #242424
 </style>
