@@ -10,6 +10,8 @@ Ensure that you have the Node version listed in the `.nvmrc` file before running
 npm install
 ```
 
+- Clone the `.env.example` file and create a new `.env.local` file with all the variables set
+
 - Compile the bundle by running:
 ```
 npm run serve
