@@ -125,7 +125,7 @@
         height="auto"
       >
         <v-list-item
-          class="no-background white--text"
+          class="no-background"
           :to="{ name: 'home' }"
         >
           <v-list-item-avatar>
