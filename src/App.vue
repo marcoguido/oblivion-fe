@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     scrollHandler(event) {
-      this.transparentNavigationToolbar = event.target.scrollingElement.scrollTop < 56;
+      this.transparentNavigationToolbar = event.target.scrollingElement.scrollTop < 25;
     },
     updateUiTheme(toBrightTheme) {
       this.$store
