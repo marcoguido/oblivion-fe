@@ -156,32 +156,22 @@
         temporary
         height="auto"
       >
-        <v-list-item
-          class="no-background"
-          :to="{ name: 'home' }"
-        >
-          <v-list-item-avatar>
-            <v-img
-              contain
-              height="30"
-              :src="require('@/assets/images/logo.png')"
-              width="30"
-            />
-          </v-list-item-avatar>
-
-          <v-list-item-content>
-            <v-list-item-title>
-              {{ `${title} ${$t('navigation.links.home')}` }}
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-divider></v-divider>
 
         <v-list
-          dense
           nav
         >
+          <v-list-item
+            class="no-background"
+            :class="{ 'black--text': !$vuetify.theme.dark, 'white--text': $vuetify.theme.dark }"
+            :to="{ name: 'home' }"
+          >
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ $t('navigation.links.home') }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
           <v-list-item
             v-for="(item, index) in links"
             :key="index"
