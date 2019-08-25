@@ -72,19 +72,32 @@
         </v-btn>
 
         <v-menu
-          offset-y
           close-on-content-click
+          offset-y
+          z-index="15"
         >
-          <template v-slot:activator="{ on }">
-            <v-btn
-              class="no-background"
-              text
-              v-on="on"
+          <template
+            v-slot:activator="{ on: menu }"
+          >
+            <v-tooltip
+              left
+              z-index="15"
             >
-              <v-icon>
-                translate
-              </v-icon>
-            </v-btn>
+              <template
+                v-slot:activator="{ on: tooltip }"
+              >
+                <v-btn
+                  class="no-background"
+                  text
+                  v-on="{ ...tooltip, ...menu }"
+                >
+                  <v-icon>
+                    translate
+                  </v-icon>
+                </v-btn>
+              </template>
+              {{ $t('navigation.languageChooser') }}
+            </v-tooltip>
           </template>
           <v-list>
             <v-list-item

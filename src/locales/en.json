@@ -10,7 +10,8 @@
     "theme": {
       "onBright": "Activate bright theme",
       "onDark": "Activate dark theme"
-    }
+    },
+    "languageChooser": "Change the language"
   },
   "cookieBar": {
     "message": "This website uses technical cookies to enhance user's experience",

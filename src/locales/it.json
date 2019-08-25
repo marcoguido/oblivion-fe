@@ -10,7 +10,8 @@
     "theme": {
       "onBright": "Attiva il tema chiaro",
       "onDark": "Attiva il tema scuro"
-    }
+    },
+    "languageChooser": "Cambia la lingua"
   },
   "cookieBar": {
     "message": "Questo sito usa dei cookie tecnici per migliorare l'esperienza d'uso",
