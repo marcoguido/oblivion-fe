@@ -2,7 +2,7 @@
   <cookie-consent
     class="text-center"
     :class="{ 'cookie-consent--dark': $vuetify.theme.dark }"
-    :button-label="$vuetify.lang.t('$vuetify.cookieBar.buttonLabel')"
+    :button-label="$t('cookieBar.buttonLabel')"
     :cookie-name="cookieName"
   >
     <template
@@ -11,21 +11,21 @@
       <span
         class="text--black text-uppercase mr-2 py-3 py-sm-1"
       >
-        {{ $vuetify.lang.t('$vuetify.cookieBar.message') }}
+        {{ $t('cookieBar.message') }}
       </span>
       <v-btn
         color="info"
         class="mx-5"
         :to="{ name: 'cookie-policy' }"
       >
-        {{ $vuetify.lang.t('$vuetify.cookieBar.linkLabel') }}
+        {{ $t('cookieBar.linkLabel') }}
       </v-btn>
     </template>
     <template
       slot="button"
     >
       <v-btn>
-        {{ $vuetify.lang.t('$vuetify.cookieBar.buttonLabel') }}
+        {{ $t('cookieBar.buttonLabel') }}
       </v-btn>
     </template>
   </cookie-consent>

@@ -1,35 +1,38 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
+import constants from './Constants/constants';
 
 Vue.use(Vuex);
 
 export default new Vuex
   .Store({
     getters: {
-      getToolbarStatus: state => state.ui.toolbarCollapsed,
+      getCurrentLocale: state => state.currentLocale,
       isThemeDark: state => state.ui.darkTheme,
     },
     state: {
+      currentLocale: process.env.VUE_APP_I18N_LOCALE,
       ui: {
-        toolbarCollapsed: true,
         darkTheme: true,
       },
     },
     mutations: {
-      TOGGLE_TOOLBAR_STATUS(state) {
-        state.ui.toolbarCollapsed = !state.ui.toolbarCollapsed;
-      },
       SET_LIGHT_THEME(state) {
         state.ui.darkTheme = false;
       },
       SET_DARK_THEME(state) {
         state.ui.darkTheme = true;
       },
+      UPDATE_LOCALE(state, languageCode) {
+        state.currentLocale = languageCode;
+      },
     },
     actions: {
-      toggleToolbarStatus({ commit }) {
-        commit('TOGGLE_TOOLBAR_STATUS');
+      updateLanguage({ commit }, languageCode) {
+        if (Object.values(constants.locales).includes(languageCode)) {
+          commit('UPDATE_LOCALE', languageCode);
+        }
       },
       toggleApplicationTheme({ commit }, shouldBeBright = false) {
         if (shouldBeBright) {

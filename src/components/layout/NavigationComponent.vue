@@ -2,6 +2,7 @@
   <span
     class="navigation-component"
   >
+    <!-- Main Navigation bar -->
     <v-app-bar
       class="navigation-component__bar"
       :class="{ transparent: transparentToolbar }"
@@ -67,10 +68,40 @@
           :key="index"
           text
         >
-          {{ link.name }}
+          {{ $t(link.translationPath) }}
         </v-btn>
 
+        <v-menu
+          offset-y
+          close-on-content-click
+        >
+          <template v-slot:activator="{ on }">
+            <v-btn
+              class="no-background"
+              text
+              v-on="on"
+            >
+              <v-icon>
+                translate
+              </v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item
+              v-for="(language, index) in availableLanguages"
+              :key="index"
+              :disabled="language.code === $i18n.locale"
+              @click="changeLanguage(language.code)"
+            >
+              <v-list-item-title>
+                {{ language.name }}
+              </v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
         <v-tooltip
+          v-if="$vuetify.breakpoint.mdAndUp"
           bottom
           z-index="15"
         >
@@ -99,17 +130,18 @@
           <span
             v-if="$vuetify.theme.dark"
           >
-            {{ this.$vuetify.lang.t('$vuetify.navigation.theme.onBright') }}
+            {{ this.$t('navigation.theme.onBright') }}
           </span>
           <span
             v-else
           >
-            {{ this.$vuetify.lang.t('$vuetify.navigation.theme.onDark') }}
+            {{ this.$t('navigation.theme.onDark') }}
           </span>
         </v-tooltip>
       </v-toolbar-items>
     </v-app-bar>
 
+    <!-- Navigation drawer wrapper -->
     <v-card
       v-if="drawer"
       class="navigation-component__drawer"
@@ -139,7 +171,7 @@
 
           <v-list-item-content>
             <v-list-item-title>
-              {{ $vuetify.lang.t('$vuetify.navigation.links.home') }}
+              {{ `${title} ${$t('navigation.links.home')}` }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -158,19 +190,52 @@
           >
             <v-list-item-content>
               <v-list-item-title>
-                {{ item.name }}
+                {{ $t(item.translationPath) }}
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
+
+        <v-divider></v-divider>
+
+        <v-list-item
+          class="no-background"
+          @click="changeUiTheme($vuetify.theme.dark)"
+        >
+          <v-list-item-content>
+            <v-list-item-title
+              v-if="$vuetify.theme.dark"
+            >
+              <v-icon>
+                wb_sunny
+              </v-icon>
+              <span
+                class="ml-3"
+              >
+                {{ this.$t('navigation.theme.onBright') }}
+              </span>
+            </v-list-item-title>
+
+            <v-list-item-title
+              v-else
+            >
+              <v-icon>
+                brightness_2
+              </v-icon>
+              <span
+                class="ml-3"
+              >
+                {{ this.$t('navigation.theme.onDark') }}
+              </span>
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-navigation-drawer>
     </v-card>
   </span>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-
 export default {
   name: 'NavigationBar',
   data() {
@@ -178,14 +243,12 @@ export default {
       drawer: false,
     };
   },
-  computed: {
-    ...mapGetters({
-      toolbarStatus: 'getToolbarStatus',
-    }),
-  },
   methods: {
     changeUiTheme(toBrightTheme = false) {
       this.$emit('themeChanged', toBrightTheme);
+    },
+    changeLanguage(newLanguageCode) {
+      this.$emit('languageChange', newLanguageCode);
     },
   },
   props: {
@@ -202,6 +265,10 @@ export default {
       type: Array,
       required: false,
       default: () => ([]),
+    },
+    availableLanguages: {
+      type: Array,
+      required: true,
     },
   },
 };

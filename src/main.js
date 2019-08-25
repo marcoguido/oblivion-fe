@@ -5,6 +5,7 @@ import Vue from 'vue';
 // Plugins
 import vuetify from '@/plugins/vuetify';
 import '@/plugins/vue-particles';
+import i18n from '@/plugins/i18n';
 
 // Router and main store
 import router from '@/router';
@@ -18,6 +19,7 @@ require('./styles/app.sass');
 Vue.config.productionTip = false;
 
 new Vue({
+  i18n,
   router,
   store,
   vuetify,

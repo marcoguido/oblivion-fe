@@ -11,10 +11,10 @@
       justify="center"
     >
       <h1>
-        {{ siteTitle }}
+        {{ this.$t('title') }}
       </h1>
       <h2>
-        {{ sitePunchline }}
+        {{ $t('punchline') }}
       </h2>
     </v-overlay>
     <vue-particles
@@ -37,27 +37,9 @@
 <script>
 export default {
   name: 'WelcomeSlide',
-  data() {
-    return {
-      sitePunchline: this.subtitle || this.$vuetify.lang.t('$vuetify.punchline'),
-      siteTitle: this.title || this.$vuetify.lang.t('$vuetify.title'),
-    };
-  },
   computed: {
     darkThemeVariant() {
       return this.$vuetify.theme.dark;
-    },
-  },
-  props: {
-    title: {
-      type: String,
-      required: false,
-      default: null,
-    },
-    subtitle: {
-      type: String,
-      required: false,
-      default: null,
     },
   },
 };

@@ -42,7 +42,7 @@
         <v-col>
           <h3
             class="site-presentation-title mb-5 text-center"
-            v-html="$vuetify.lang.t('$vuetify.pages.home.authorDescription.title')"
+            v-html="$t('pages.home.authorDescription.title')"
           ></h3>
         </v-col>
       </v-row>
@@ -50,7 +50,7 @@
         <v-col>
           <span
             class="site-presentation-description text-justify"
-            v-html="$vuetify.lang.t('$vuetify.pages.home.authorDescription.description')"
+            v-html="$t('pages.home.authorDescription.description')"
           ></span>
         </v-col>
       </v-row>
@@ -63,7 +63,7 @@
             :to="{ name: 'about' }"
             color="info"
           >
-            {{ $vuetify.lang.t('$vuetify.discoverMore') }}
+            {{ $t('discoverMore') }}
           </v-btn>
         </v-col>
       </v-row>
