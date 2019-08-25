@@ -4,14 +4,12 @@
   >
     <v-overlay
       absolute
-      align="center"
       class="welcome-slide__overlay"
       :opacity="0.2"
       :dark="darkThemeVariant"
-      justify="center"
     >
       <h1>
-        {{ this.$t('title') }}
+        {{ $t('title') }}
       </h1>
       <h2>
         {{ $t('punchline') }}

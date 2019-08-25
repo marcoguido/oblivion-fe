@@ -1,15 +1,26 @@
 <template>
   <v-container
-    class="navigation-component-margin"
     pt-0
     fluid
   >
+    <page-header
+      page-title-translatable-key="title"
+    />
+
     <v-row
-      class="welcome-slide full-viewport"
+      class="welcome-slide"
     >
-      <v-col class="about">
+      <v-col class="about full-viewport">
         <h1>This is an about page</h1>
       </v-col>
     </v-row>
   </v-container>
 </template>
+
+<script>
+import PageHeader from '../components/layout/PageHeader.vue';
+
+export default {
+  components: { PageHeader },
+};
+</script>
