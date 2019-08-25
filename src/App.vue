@@ -11,7 +11,7 @@
       />
 
       <router-view/>
-
+      <cookie-bar />
       <Footer />
     </v-content>
   </v-app>
@@ -21,9 +21,10 @@
 import { mapGetters } from 'vuex';
 import Footer from './components/layout/Footer.vue';
 import NavigationComponent from './components/layout/NavigationComponent.vue';
+import CookieBar from './components/layout/CookieBar.vue';
 
 export default {
-  components: { NavigationComponent, Footer },
+  components: { NavigationComponent, Footer, CookieBar },
   computed: {
     ...mapGetters({
       toolbarStatus: 'getToolbarStatus',

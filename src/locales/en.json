@@ -13,6 +13,11 @@
         "onDark": "Activate dark theme"
       }
     },
+    "cookieBar": {
+      "message": "This website uses technical cookies to enhance user's experience",
+      "buttonLabel": "Alright!",
+      "linkLabel": "I'd like to know more"
+    },
     "pages": {
       "home": {
         "authorDescription": {

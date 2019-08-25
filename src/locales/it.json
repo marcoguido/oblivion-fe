@@ -13,6 +13,11 @@
         "onDark": "Attiva il tema scuro"
       }
     },
+    "cookieBar": {
+      "message": "Questo sito usa dei cookie tecnici per migliorare l'esperienza d'uso",
+      "buttonLabel": "Mi sta bene!",
+      "linkLabel": "Vorrei saperne di più"
+    },
     "pages": {
       "home": {
         "authorDescription": {
