@@ -4,7 +4,7 @@
   >
     <v-overlay
       absolute
-      class="welcome-slide__overlay"
+      class="welcome-slide__overlay text-center"
       :opacity="0.2"
       :dark="darkThemeVariant"
     >
