@@ -44,7 +44,7 @@
 
       <v-btn
         v-if="$vuetify.breakpoint.smAndDown"
-        class="no-background"
+        class="no-background pl-10"
         text
         tile
         :to="{ name: 'home' }"
