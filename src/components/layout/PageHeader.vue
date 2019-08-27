@@ -1,7 +1,12 @@
 <template>
   <v-row
-    class="page-header full-width orange"
-    :class="{ 'half-height': isBreakpointAtLeastSm, 'full-viewport': isBreakpointXs }"
+    class="page-header full-width"
+    :class="{
+      'half-height': isBreakpointAtLeastSm,
+      'full-viewport': isBreakpointXs,
+      'indigo darken-4 page-header--wiggles': $vuetify.theme.dark,
+      'orange lighten-1': !$vuetify.theme.dark,
+    }"
   >
     <v-col
       class="page-header__banner my-auto"
@@ -14,7 +19,7 @@
           {{ $t(pageTitleTranslatableKey) }}
         </h1>
         <h2>
-          {{ pageSubtitleTranslatableKey }}
+          {{ $t(pageSubtitleTranslatableKey) }}
         </h2>
       </div>
     </v-col>
@@ -40,15 +45,22 @@ export default {
     pageSubtitleTranslatableKey: {
       type: String,
       required: false,
-      default: 'pluto paperino pippo',
+      default: '',
     },
   },
 };
 </script>
 
 <style lang="sass">
+@import "../../styles/mixins/mixins"
+
 .page-header
+  @include svg-bubbles-background('%23f1e9de')
+  background-repeat: repeat
   position: relative
+
+  &--wiggles
+    @include svg-wiggles-background('%23757575')
 
   h1
     font-size: 6rem

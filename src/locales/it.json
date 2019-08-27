@@ -14,7 +14,7 @@
     "languageChooser": "Cambia la lingua"
   },
   "cookieBar": {
-    "message": "Questo sito usa dei cookie tecnici per migliorare l'esperienza d'uso",
+    "message": "Questo sito usa dei cookie tecnici per migliorare l’esperienza d’uso",
     "buttonLabel": "Mi sta bene!",
     "linkLabel": "Vorrei saperne di più"
   },
@@ -24,6 +24,10 @@
         "title": "Dunque, vediamo.. Ciao!",
         "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut, dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at pharetra. Nam pellentesque, nibh quis pretium tempus, justo mauris luctus quam, quis egestas felis neque rhoncus ante. Praesent dignissim orci a blandit eleifend.</p><p>Sed eget est dolor. Donec sit amet velit justo. Proin eget ex suscipit, porttitor justo ac, pellentesque tellus. Fusce tincidunt rutrum fermentum. Nunc dignissim nisl id rhoncus aliquet. Donec tempor nisl eget sapien molestie elementum. Pellentesque aliquet iaculis pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras hendrerit nulla vel sollicitudin tincidunt. Praesent ultrices consequat metus in mattis. Vestibulum eu quam tortor. Nam tempor luctus justo sit amet sodales. Suspendisse potenti. Etiam id arcu at turpis bibendum consectetur et quis elit.</p>"
       }
+    },
+    "about": {
+      "title": "It’s-a Me, Mario!",
+      "subtitle": "Qualcosa su di me, il tuo cantastorie"
     }
   }
 }

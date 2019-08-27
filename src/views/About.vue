@@ -4,7 +4,8 @@
     fluid
   >
     <page-header
-      page-title-translatable-key="title"
+      page-title-translatable-key="pages.about.title"
+      page-subtitle-translatable-key="pages.about.subtitle"
     />
 
     <v-row
