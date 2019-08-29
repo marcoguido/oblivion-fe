@@ -4,11 +4,13 @@
     fluid
   >
     <welcome-slide />
+
     <v-container>
       <site-presentation
         author-email="guidolin.marco94@gmail.com"
       />
     </v-container>
+
   </v-container>
 </template>
 

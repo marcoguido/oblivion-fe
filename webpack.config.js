@@ -13,7 +13,6 @@ module.exports = {
           options: {
             implementation: sass,
             fiber: fibers,
-            indentedSyntax: true, // optional
           },
         },
       ],

@@ -5,7 +5,7 @@
       'half-height': isBreakpointAtLeastSm,
       'full-viewport': isBreakpointXs,
       'indigo darken-4 page-header--wiggles': $vuetify.theme.dark,
-      'orange lighten-1': !$vuetify.theme.dark,
+      'orange darken-2': !$vuetify.theme.dark,
     }"
   >
     <v-col
@@ -13,7 +13,7 @@
     >
       <div
         class="text-left px-md-12"
-        :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
+        :class="{ textCenter: $vuetify.breakpoint.smAndDown }"
       >
         <h1>
           {{ $t(pageTitleTranslatableKey) }}
