@@ -13,7 +13,7 @@
     >
       <div
         class="text-left px-md-12"
-        :class="{ textCenter: $vuetify.breakpoint.smAndDown }"
+        :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
       >
         <h1>
           {{ $t(pageTitleTranslatableKey) }}

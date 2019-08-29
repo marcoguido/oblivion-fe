@@ -17,9 +17,9 @@
         class="timeline-section-content"
       >
         <h2
-          class="text-center pb-10"
+          class="text-center text-uppercase pb-10"
         >
-          This is an about page
+          {{ $t('pages.about.secondSection.title') }}
         </h2>
         <span
           v-if="$vuetify.breakpoint.xsOnly"
@@ -47,12 +47,7 @@
             <v-card-text
               class="white black--text pa-5"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
-              ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
-              condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
-              dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
-              mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-              pharetra.
+              {{ item.content }}
             </v-card-text>
           </v-card>
         </span>
@@ -105,12 +100,7 @@
               <v-card-text
                 class="white black--text pa-5"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
-                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
-                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
-                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
-                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra.
+                {{ item.content }}
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -123,39 +113,12 @@
 <script>
 export default {
   name: 'LifeEventsComponent',
-  data() {
-    return {
-      items: [
-        {
-          color: 'purple',
-          colorModifier: ' lighten-2',
-          icon: 'mdi-star',
-          year: 1994,
-          title: 'Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor ',
-        },
-        {
-          color: 'pink',
-          icon: 'mdi-book-variant',
-          colorModifier: 'darken-1',
-          year: 2001,
-          title: 'Lorem ipsum dolor',
-        },
-        {
-          color: 'teal',
-          icon: 'mdi-airballoon',
-          colorModifier: 'lighten-1',
-          year: 2017,
-          title: 'Lorem ipsum dolor',
-        },
-        {
-          color: 'indigo',
-          colorModifier: '',
-          icon: 'mdi-buffer',
-          year: new Date().getFullYear(),
-          title: 'Lorem ipsum dolor',
-        },
-      ],
-    };
+  props: {
+    items: {
+      type: Array,
+      required: false,
+      default: () => ([]),
+    },
   },
 };
 </script>

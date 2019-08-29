@@ -15,39 +15,25 @@
     >
       <v-row>
         <v-col>
-          <h2>
-            This is an about page
+          <h2
+            class="text-uppercase"
+          >
+            {{ $t('pages.about.firstSection.title') }}
           </h2>
         </v-col>
       </v-row>
       <v-row>
         <v-col
-          :class="{ textJustify: $vuetify.breakpoint.xsOnly }"
+          :class="{ 'text-justify': $vuetify.breakpoint.smAndDown }"
+          v-html="$t('pages.about.firstSection.content')"
         >
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel ligula
-            iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc condimentum
-            placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut, dignissim neque. Sed
-            eget semper massa. Maecenas placerat felis nec mauris tempor mattis. Cras pretium enim
-            eget pulvinar sollicitudin. Phasellus mollis sed sem at pharetra. Nam pellentesque, nibh
-            quis pretium tempus, justo mauris luctus quam, quis egestas felis neque rhoncus ante.
-            Praesent dignissim orci a blandit eleifend.
-          </p>
-          <p>
-            Sed eget est dolor. Donec sit amet velit justo. Proin eget ex suscipit, porttitor justo
-            ac, pellentesque tellus. Fusce tincidunt rutrum fermentum. Nunc dignissim nisl id
-            rhoncus aliquet. Donec tempor nisl eget sapien molestie elementum. Pellentesque aliquet
-            iaculis pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia Curae; Cras hendrerit nulla vel sollicitudin tincidunt. Praesent
-            ultrices consequat metus in mattis. Vestibulum eu quam tortor. Nam tempor luctus justo
-            sit amet sodales. Suspendisse potenti. Etiam id arcu at turpis bibendum consectetur et
-            quis elit.
-          </p>
         </v-col>
       </v-row>
     </v-container>
 
-    <life-events-component />
+    <life-events-component
+      :items="items"
+    />
   </section>
 </template>
 
@@ -57,5 +43,84 @@ import LifeEventsComponent from '../components/LifeEventsComponent.vue';
 
 export default {
   components: { PageHeader, LifeEventsComponent },
+  data() {
+    return {
+      items: [
+        {
+          color: 'purple',
+          colorModifier: ' lighten-2',
+          icon: 'mdi-star',
+          year: 1994,
+          title: 'Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor ',
+          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
+                ligula iaculis, non lacinia velit varius.`,
+        },
+        {
+          color: 'pink',
+          icon: 'mdi-book-variant',
+          colorModifier: 'darken-1',
+          year: 2001,
+          title: 'Lorem ipsum dolor',
+          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
+                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
+                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
+                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
+                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
+                pharetra Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
+                pharetra. Etiam sed turpis tempus, tincidunt lorem ut,
+                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
+                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
+                pharetra Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
+                pharetra.`,
+        },
+        {
+          color: 'teal',
+          icon: 'mdi-airballoon',
+          colorModifier: 'lighten-1',
+          year: 2017,
+          title: 'Lorem ipsum dolor',
+          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
+                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
+                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
+                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
+                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
+                pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
+                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
+                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
+                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
+                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
+                pharetra.`,
+        },
+        {
+          color: 'indigo',
+          colorModifier: '',
+          icon: 'mdi-buffer',
+          year: new Date().getFullYear(),
+          title: 'Lorem ipsum',
+          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
+                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
+                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
+                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
+                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
+                pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
+                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
+                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
+                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
+                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
+                pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
+                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
+                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
+                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
+                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
+                pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
+                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
+                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
+                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
+                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
+                pharetra.`,
+        },
+      ],
+    };
+  },
 };
 </script>
