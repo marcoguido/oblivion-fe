@@ -126,8 +126,8 @@ export default {
 <style lang="sass" scoped>
   .timeline-section
     &-content
-    .card-title-text
-      max-width: 75%
+      .card-title-text
+        max-width: 75%
       .card-title-year
         margin-left: 5%
 
