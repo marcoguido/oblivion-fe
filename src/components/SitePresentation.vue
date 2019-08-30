@@ -4,6 +4,7 @@
   >
     <v-col
       v-if="!hideAuthorAvatar"
+      class="my-auto"
       cols="12"
       md="4"
       xl="2"
