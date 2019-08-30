@@ -9,11 +9,12 @@
       slot="message"
     >
       <span
-        class="text--black text-uppercase mr-2 py-3 py-sm-1"
+        class="text--black text-uppercase mr-2 py-3 py-sm-1 px-2"
       >
         {{ $t('cookieBar.message') }}
       </span>
       <v-btn
+        v-if="showCookiePolicyLink"
         color="info"
         class="mx-5"
         :to="{ name: 'cookie-policy' }"
@@ -40,6 +41,13 @@ export default {
   data: () => ({
     cookieName: process.env.VUE_APP_COOKIE_CONSENT_COOKIE_NAME,
   }),
+  props: {
+    showCookiePolicyLink: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+  },
 };
 </script>
 

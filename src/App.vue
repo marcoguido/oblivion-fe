@@ -13,7 +13,9 @@
       />
 
       <router-view/>
-      <cookie-bar />
+      <cookie-bar
+        :show-cookie-policy-link="false"
+      />
       <Footer />
     </v-content>
   </v-app>
