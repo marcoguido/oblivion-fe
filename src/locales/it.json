@@ -25,6 +25,10 @@
         "description": "<p class=\"text-center\">\n\tLa domanda sorge spontanea: <strong>perché Oblivion?</strong>\n</p>\n<p>\n\tBeh, Oblivion - oblio, letteralmente - nasce dal fatto che sono uno smemorato cronico, dal fatto che mi impongo di vivere la vita ordinatamente altrimenti non ricorderei di fare nulla di ciò che debbo fare: <del>quasi</del> tutto deve essere documentato e ben organizzato.\n</p>\n<p>\n\tScherzi a parte, <b>Oblivion</b> è il mio sito personale, pensato per presentarmi al mondo e, soprattutto, per <b>sperimentare</b> nuove tecnologie ed approcci nella programmazione, così da migliorarmi giorno dopo giorno.<br> ...Mi sono dimenticato di dire che sono un programmatore, vero?\n</p>\n<p>\n\t“Ma chi è quello che scrive?“, potresti chiederti. Io sono Batma... Ehm, forse no in effetti. Sono solo il tuo amichevole <strong>Marco Guidolin</strong> di quartiere.\n</p>\n<p>\n\tTi ho forse incuriosito? Pensi già che sia un nerd senza speranza? Vuoi scoprire qualcosa di più su di me, su questo progetto o su quello che faccio? Allora tutto ciò che devi fare è cliccare sul pulsante sottostante, non te ne pentirai!\n</p>"
       }
     },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "content": "Lorem ipsum"
+    },
     "about": {
       "title": "It’s-a Me, Mario!",
       "subtitle": "Qualcosa su di me, il tuo cantastorie",
@@ -33,8 +37,45 @@
         "content": "<p>\n            Lorena ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel ligula\n            iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc condimentum\n            placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut, dignissim neque. Sed\n            eget semper massa. Maecenas placerat felis nec mauris tempor mattis. Cras pretium enim\n            eget pulvinar sollicitudin. Phasellus mollis sed sem at pharetra. Nam pellentesque, nibh\n            quis pretium tempus, justo mauris luctus quam, quis egestas felis neque rhoncus ante.\n            Praesent dignissim orci a blandit eleifend.\n          </p>\n          <p>\n            Sed eget est dolor. Donec sit amet velit justo. Proin eget ex suscipit, porttitor justo\n            ac, pellentesque tellus. Fusce tincidunt rutrum fermentum. Nunc dignissim nisl id\n            rhoncus aliquet. Donec tempor nisl eget sapien molestie elementum. Pellentesque aliquet\n            iaculis pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices\n            posuere cubilia Curae; Cras hendrerit nulla vel sollicitudin tincidunt. Praesent\n            ultrices consequat metus in mattis. Vestibulum eu quam tortor. Nam tempor luctus justo\n            sit amet sodales. Suspendisse potenti. Etiam id arcu at turpis bibendum consectetur et\n            quis elit.\n          </p>"
       },
       "secondSection": {
-        "title": "Il mio viaggio"
+        "title": "Il mio viaggio",
+        "items": {
+          "born": {
+            "title": "L‘inizio",
+            "content": "Sono nato a Treviso il 2 marzo 1994."
+          },
+          "graduation": {
+            "title": "Diploma",
+            "content": "A giugno 2013 mi diplomo presso il <b>Liceo Scientifico Statale Leonardo da Vinci</b> di Treviso con una votazione di 85/100."
+          },
+          "university": {
+            "title": "Studi universitari",
+            "content": "A settembre 2013 inizio la carriera universitaria presso l‘<b>Università Ca‘ Foscari</b> di Venezia accedendo al corso di laurea in Scienze dell‘Informazione."
+          },
+          "sgc": {
+            "title": "Stage SG Community",
+            "content": "Durante i mesi di luglio e agosto del 2015 ho effettuato uno stage universitario presso l‘azienda <b>SG Community</b> di Treviso. Durante il tirocinio ho creato una piattaforma per gestire le attività di content creation e content curation della clientela aziendale. Sulla base di questo progetto è stata sviluppata la mia tesi di laurea triennale."
+          },
+          "stageEgea": {
+            "title": "Stage Egea Tecnologie Informatiche",
+            "content": "Dal novembre 2016 fino ad ottobre 2017 sono stato tirocinante presso l‘azienda <b>Egea Tecnologie Informatiche</b>. Presso l‘azienda ho avuto modo di coltivare le mie conoscenze nell‘ambito della programmazione orientata al web tramite linguaggi PHP e JavaScript, sia lato client che lato server."
+          },
+          "bachelorDegree": {
+            "title": "Diploma di laurea",
+            "content": "Nel marzo 2017, durante la sessione di laurea straordinaria per l‘anno accademico 2016/2017 ho conseguito il titolo di <b>dottore in Scienze e dell‘Informazione</b> con votazione di 100/110."
+          },
+          "hFarmConsulting": {
+            "title": "Consulenza presso H-Farm",
+            "content": "Durante il mio periodo lavorativo presso Egea Tecnologie Informatiche sono stato trasferito per svariati mesi presso la sede centrale della multinazionale <b>H-Farm</b> con sede a Roncade (TV) in qualità di consulente esterno. Ho avuto modo di lavorare a svariati progetti di multinazionali del settore assicurativo e bancario, nonché ad una serie di complessi prototipi di applicazioni web per conto una nota multinazionale dell‘abbigliamento."
+          },
+          "today": {
+            "title": "Oggi",
+            "content": "Lavoro tuttora presso <b>Egea Tecnologie Informatiche</b> e mi occupo della creazione, mantenimento e messa online di applicazioni web in PHP e NodeJS."
+          }
+        }
       }
+    },
+    "notFound": {
+      "title": "Ooops, non c‘è nulla qui!"
     }
   }
 }

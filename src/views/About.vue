@@ -7,6 +7,7 @@
       <page-header
         page-title-translatable-key="pages.about.title"
         page-subtitle-translatable-key="pages.about.subtitle"
+        :header-image-src="require('@/assets/images/mario.png')"
       />
     </v-container>
 
@@ -24,6 +25,7 @@
 
     <life-events-component
       :items="items"
+      lang-keys-prefix="pages.about.secondSection.items"
     />
   </section>
 </template>
@@ -43,73 +45,56 @@ export default {
           colorModifier: ' lighten-2',
           icon: 'mdi-star',
           year: 1994,
-          title: 'Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor ',
-          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
-                ligula iaculis, non lacinia velit varius.`,
+          slug: 'born',
         },
         {
           color: 'pink',
-          icon: 'mdi-book-variant',
+          icon: 'mdi-school',
           colorModifier: 'darken-1',
-          year: 2001,
-          title: 'Lorem ipsum dolor',
-          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
-                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
-                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
-                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
-                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra. Etiam sed turpis tempus, tincidunt lorem ut,
-                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
-                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra.`,
+          year: 2013,
+          slug: 'graduation',
         },
         {
           color: 'teal',
-          icon: 'mdi-airballoon',
+          icon: 'mdi-school',
           colorModifier: 'lighten-1',
+          year: 2013,
+          slug: 'university',
+        },
+        {
+          color: 'orange',
+          icon: 'mdi-airballoon',
+          colorModifier: '',
+          year: 2015,
+          slug: 'sgc',
+        },
+        {
+          color: 'light-blue',
+          icon: 'mdi-airballoon',
+          colorModifier: 'darken-1',
+          year: 2016,
+          slug: 'stageEgea',
+        },
+        {
+          color: 'amber',
+          icon: 'mdi-school',
+          colorModifier: '',
           year: 2017,
-          title: 'Lorem ipsum dolor',
-          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
-                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
-                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
-                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
-                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
-                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
-                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
-                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
-                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra.`,
+          slug: 'bachelorDegree',
+        },
+        {
+          color: 'green',
+          icon: 'mdi-airballoon',
+          colorModifier: '',
+          year: 2017,
+          slug: 'hFarmConsulting',
         },
         {
           color: 'indigo',
           colorModifier: '',
           icon: 'mdi-buffer',
           year: new Date().getFullYear(),
-          title: 'Lorem ipsum',
-          content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
-                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
-                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
-                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
-                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
-                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
-                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
-                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
-                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
-                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
-                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
-                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
-                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel
-                ligula iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc
-                condimentum placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut,
-                dignissim neque. Sed eget semper massa. Maecenas placerat felis nec mauris tempor
-                mattis. Cras pretium enim eget pulvinar sollicitudin. Phasellus mollis sed sem at
-                pharetra.`,
+          slug: 'today',
         },
       ],
     };

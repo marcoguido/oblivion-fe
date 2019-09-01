@@ -4,13 +4,20 @@
     :class="{
       'half-height': isBreakpointAtLeastSm,
       'full-viewport': isBreakpointXs,
-      'indigo darken-4 page-header--wiggles': $vuetify.theme.dark,
-      'orange darken-2': !$vuetify.theme.dark,
+      'light-blue darken-4 page-header--wiggles': $vuetify.theme.dark,
+      'blue darken-1': !$vuetify.theme.dark,
     }"
   >
     <v-col
-      class="page-header__banner my-auto"
+      class="page-header__banner my-auto d-flex"
     >
+      <v-img
+        v-if="!!headerImageSrc && !isBreakpointXs"
+        class="my-auto ml-10 mr-5"
+        contain
+        max-width="70"
+        :src="headerImageSrc"
+      />
       <div
         class="text-left px-md-12"
         :class="{ 'text-center': $vuetify.breakpoint.smAndDown }"
@@ -47,6 +54,10 @@ export default {
       required: false,
       default: '',
     },
+    headerImageSrc: {
+      type: String,
+      required: false,
+    },
   },
 };
 </script>
@@ -55,12 +66,12 @@ export default {
 @import "../../styles/mixins/mixins"
 
 .page-header
-  @include svg-bubbles-background('%23f1e9de')
+  @include svg-bubbles-background('%2364B5F6')
   background-repeat: repeat
   position: relative
 
   &--wiggles
-    @include svg-wiggles-background('%23757575')
+    @include svg-wiggles-background('%234FC3F7')
 
   h1
     font-size: 6rem

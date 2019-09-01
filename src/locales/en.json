@@ -25,6 +25,10 @@
         "description": "<p class=\"text-center\">\n\tThe question arises spontaneously: <strong>why Oblivion?</strong>\n</p>\n<p>\n\tWell, Oblivion is born upon the fact that I am a chronic forgetful person, upon the fact that I have to live my life in a well-ordered way, otherwise I would forget to do anything of what I have to do: <del>almost</del> everything has to be documented and well organized.\n</p>\n<p>\n\tJokes aside, <b>Oblivion</b> is my personal website, designed to indroduce myself to the World and, mostly, to <b>experiment</b> new programming trends and approaches in order to improve myself everyday.<br> ...Did I forget to tell you that I am a programmer, didn't I?\n</p>\n<p>\n\t“But who is the one writing?“, you could ask. Well, I am Batma... Ehr, maybe not actually. I am just your friendly neighbourhood <strong>Marco Guidolin</strong>.\n</p>\n<p>\n\tDid I got your attention? Do you already think I am a hopeless nerd? Do You want to discover a little more about myself, this project or about what I do? Then all you have to do is click on the button down here, you won't regret it!\n</p>"
       }
     },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "content": "Lorem ipsum"
+    },
     "about": {
       "title": "It’s-a Me, Mario!",
       "subtitle": "A little more about me, your storyteller",
@@ -33,8 +37,45 @@
         "content": "<p>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus vel ligula\n            iaculis, non lacinia velit varius. Praesent vel suscipit massa. Nunc condimentum\n            placerat accumsan. Etiam sed turpis tempus, tincidunt lorem ut, dignissim neque. Sed\n            eget semper massa. Maecenas placerat felis nec mauris tempor mattis. Cras pretium enim\n            eget pulvinar sollicitudin. Phasellus mollis sed sem at pharetra. Nam pellentesque, nibh\n            quis pretium tempus, justo mauris luctus quam, quis egestas felis neque rhoncus ante.\n            Praesent dignissim orci a blandit eleifend.\n          </p>\n          <p>\n            Sed eget est dolor. Donec sit amet velit justo. Proin eget ex suscipit, porttitor justo\n            ac, pellentesque tellus. Fusce tincidunt rutrum fermentum. Nunc dignissim nisl id\n            rhoncus aliquet. Donec tempor nisl eget sapien molestie elementum. Pellentesque aliquet\n            iaculis pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices\n            posuere cubilia Curae; Cras hendrerit nulla vel sollicitudin tincidunt. Praesent\n            ultrices consequat metus in mattis. Vestibulum eu quam tortor. Nam tempor luctus justo\n            sit amet sodales. Suspendisse potenti. Etiam id arcu at turpis bibendum consectetur et\n            quis elit.\n          </p>"
       },
       "secondSection": {
-        "title": "My journey"
+        "title": "My journey",
+        "items": {
+          "born": {
+            "title": "The beginning",
+            "content": "I was born in Treviso (Italy) the 2nd of March, 1994."
+          },
+          "graduation": {
+            "title": "The degree",
+            "content": "In June 2013 I graduated from <b>Liceo Scientifico Statale Leonardo da Vinci</b> High School of Treviso with a score of 85 out of 100."
+          },
+          "university": {
+            "title": "University studies",
+            "content": "In September 2013 I started my university studies at <b>Ca‘ Foscari University</b> of Venice, attending the Computer Science course."
+          },
+          "sgc": {
+            "title": "Stage at SG Community",
+            "content": "During July and August 2015 I did a curricular internship at <b>SG Community</b>, a company located in Treviso. During my internship I created a platform to help the company doing both content curation and content creation activities on behalf of their customers. Upon this project I built my bachelor degree thesis."
+          },
+          "stageEgea": {
+            "title": "Stage at Egea Tecnologie Informatiche",
+            "content": "From November 2016 until October 2017 I did an internship at <b>Egea Tecnologie Informatiche</b> in Marcon (Venice). With this long experience I was able to grow my knowledge about web programming with languages like PHP and JavaScript, both client and server side."
+          },
+          "bachelorDegree": {
+            "title": "Bachelor degree",
+            "content": "In March 2017 I got my bachelor degree in <b>Computer Science</b> with a score of 100 out of 110."
+          },
+          "hFarmConsulting": {
+            "title": "Consulting experience at H-Farm",
+            "content": "During my work at <b>Egea Tecnologie Informatiche</b> I was sent for several months to the central office of <b>H-Farm</b>, a multinational company with its main office in Roncade (Treviso) with the qualification of external consultant. There I had the opportunity to work on projects of many financial and insurance multinational industries and to a series of complex POCs (proof of concept projects) of web applications for a well-known clothing factory."
+          },
+          "today": {
+            "title": "Today",
+            "content": "Nowadays I work at <b>Egea Tecnologie Informatiche</b> where I create, maintain and deploy web applications written in PHP and NodeJS."
+          }
+        }
       }
+    },
+    "notFound": {
+      "title": "Whoops, there‘s nothing here!"
     }
   }
 }

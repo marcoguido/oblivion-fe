@@ -6,7 +6,7 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: process.env.VUE_APP_BASE_URL,
+  base: '',
   routes: [
     {
       path: '/',
@@ -19,9 +19,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
-      path: '/cookie-policy',
-      name: 'cookie-policy',
-      component: () => import(/* webpackChunkName: "cookie-policy" */ './views/CookiePolicy.vue'),
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: () => import(/* webpackChunkName: "privacy-policy" */ './views/PrivacyPolicy.vue'),
+    },
+    {
+      path: '*',
+      name: 'not-found',
+      component: () => import(/* webpackChunkName: "privacy-policy" */ './views/NotFound.vue'),
     },
   ],
   scrollBehavior(to, from, savedPosition) {

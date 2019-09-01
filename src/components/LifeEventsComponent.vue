@@ -80,7 +80,7 @@
                 v-if="$vuetify.breakpoint.mdAndUp"
                 class="title white--text"
               >
-                {{ item.title }}
+                {{ $t(`${langKeysPrefix}.${item.slug}.title`) }}
               </v-card-title>
               <v-card-title
                 v-else
@@ -89,7 +89,7 @@
                 <div
                   class="card-title-text text-truncate flex-grow-1"
                 >
-                  {{ item.title }}
+                  {{ $t(`${langKeysPrefix}.${item.slug}.title`) }}
                 </div>
                 <div
                   class="card-title-year flex-grow-0"
@@ -97,10 +97,11 @@
                   {{ item.year }}
                 </div>
               </v-card-title>
+
               <v-card-text
                 class="white black--text pa-5"
+                v-html="$t(`${langKeysPrefix}.${item.slug}.content`)"
               >
-                {{ item.content }}
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -118,6 +119,10 @@ export default {
       type: Array,
       required: false,
       default: () => ([]),
+    },
+    langKeysPrefix: {
+      type: String,
+      required: false,
     },
   },
 };

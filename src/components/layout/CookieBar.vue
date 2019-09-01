@@ -14,10 +14,10 @@
         {{ $t('cookieBar.message') }}
       </span>
       <v-btn
-        v-if="showCookiePolicyLink"
+        v-if="showPrivacyPolicyLink"
         color="info"
         class="mx-5"
-        :to="{ name: 'cookie-policy' }"
+        :to="{ name: 'privacy-policy' }"
       >
         {{ $t('cookieBar.linkLabel') }}
       </v-btn>
@@ -42,7 +42,7 @@ export default {
     cookieName: process.env.VUE_APP_COOKIE_CONSENT_COOKIE_NAME,
   }),
   props: {
-    showCookiePolicyLink: {
+    showPrivacyPolicyLink: {
       type: Boolean,
       required: false,
       default: true,

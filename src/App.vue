@@ -14,7 +14,7 @@
 
       <router-view/>
       <cookie-bar
-        :show-cookie-policy-link="false"
+        :show-privacy-policy-link="false"
       />
       <Footer />
     </v-content>
