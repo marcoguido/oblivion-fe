@@ -6,7 +6,7 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: process.env.VUE_APP_BASE_URL,
   routes: [
     {
       path: '/',
@@ -24,4 +24,7 @@ export default new Router({
       component: () => import(/* webpackChunkName: "cookie-policy" */ './views/CookiePolicy.vue'),
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return savedPosition || { x: 0, y: 0 };
+  },
 });
