@@ -6,8 +6,11 @@
     <welcome-slide />
 
     <v-container>
-      <site-presentation
+      <presentation-component
         author-email="guidolin.marco94@gmail.com"
+        :hide-author-avatar="true"
+        title-string-path="pages.home.authorDescription.title"
+        description-string-path="pages.home.authorDescription.description"
       />
     </v-container>
 
@@ -16,11 +19,11 @@
 
 <script>
 import WelcomeSlide from '../components/WelcomeSlide.vue';
-import SitePresentation from '../components/SitePresentation.vue';
+import PresentationComponent from '../components/PresentationComponent.vue';
 
 export default {
   components: {
-    SitePresentation,
+    PresentationComponent,
     WelcomeSlide,
   },
 };

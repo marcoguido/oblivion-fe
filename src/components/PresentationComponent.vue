@@ -1,9 +1,9 @@
 <template>
   <v-row
-    class="site-presentation"
+    class="presentation-component"
   >
     <v-col
-      v-if="!hideAuthorAvatar"
+      v-if="!hideAuthorAvatar && ($vuetify.breakpoint.smAndDown || avatarLeft)"
       class="my-auto"
       cols="12"
       md="4"
@@ -11,8 +11,8 @@
     >
       <v-img
         alt="Author profile picture"
-        class="site-presentation-avatar ma-auto"
-        :class="{ 'site-presentation-avatar--black-border': !$vuetify.theme.dark }"
+        class="presentation-component-avatar ma-auto"
+        :class="{ 'presentation-component-avatar--black-border': !$vuetify.theme.dark }"
         :max-height="windowWidth < 960 ? 320 : 600"
         :max-width="windowWidth < 960 ? 320 : 600"
         :src="gravatarSrc"
@@ -33,25 +33,25 @@
         </template>
       </v-img>
     </v-col>
+
     <v-col
       cols="12"
       :md="!hideAuthorAvatar ? 8 : 12"
-      mx-8
       :xl="!hideAuthorAvatar ? 10 : 12"
     >
       <v-row>
         <v-col>
           <h3
-            class="site-presentation-title mb-5 text-center"
-            v-html="$t('pages.home.authorDescription.title')"
+            class="presentation-component-title mb-5 text-center text-uppercase"
+            v-html="$t(titleStringPath)"
           ></h3>
         </v-col>
       </v-row>
       <v-row>
         <v-col>
           <span
-            class="site-presentation-description text-justify"
-            v-html="$t('pages.home.authorDescription.description')"
+            class="presentation-component-description text-justify"
+            v-html="$t(descriptionStringPath)"
           ></span>
         </v-col>
       </v-row>
@@ -69,6 +69,38 @@
         </v-col>
       </v-row>
     </v-col>
+
+    <v-col
+      v-if="!hideAuthorAvatar && (!$vuetify.breakpoint.smAndDown && !avatarLeft)"
+      class="my-auto"
+      cols="12"
+      md="4"
+      xl="2"
+    >
+      <v-img
+        alt="Author profile picture"
+        class="presentation-component-avatar ma-auto"
+        :class="{ 'presentation-component-avatar--black-border': !$vuetify.theme.dark }"
+        :max-height="windowWidth < 960 ? 320 : 600"
+        :max-width="windowWidth < 960 ? 320 : 600"
+        :src="gravatarSrc"
+      >
+        <template
+          v-slot:placeholder
+        >
+          <v-row
+            class="fill-height ma-0"
+            align="center"
+            justify="center"
+          >
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            />
+          </v-row>
+        </template>
+      </v-img>
+    </v-col>
   </v-row>
 </template>
 
@@ -76,7 +108,7 @@
 import md5 from 'blueimp-md5';
 
 export default {
-  name: 'SitePresentation',
+  name: 'PresentationComponent',
   computed: {
     gravatarSrc() {
       const baseUrl = 'https://www.gravatar.com/avatar/';
@@ -94,6 +126,19 @@ export default {
     authorEmail: {
       type: String,
       required: true,
+    },
+    titleStringPath: {
+      type: String,
+      required: true,
+    },
+    descriptionStringPath: {
+      type: String,
+      required: true,
+    },
+    avatarLeft: {
+      type: Boolean,
+      required: false,
+      default: true,
     },
     hideAuthorAvatar: {
       type: Boolean,
@@ -118,7 +163,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-.site-presentation
+.presentation-component
   margin: 5% auto
 
   &-title

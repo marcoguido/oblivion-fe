@@ -13,22 +13,13 @@
     <v-container
       py-10
     >
-      <v-row>
-        <v-col>
-          <h2
-            class="text-uppercase"
-          >
-            {{ $t('pages.about.firstSection.title') }}
-          </h2>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col
-          :class="{ 'text-justify': $vuetify.breakpoint.smAndDown }"
-          v-html="$t('pages.about.firstSection.content')"
-        >
-        </v-col>
-      </v-row>
+      <presentation-component
+        author-email="guidolin.marco94@gmail.com"
+        :avatar-left="false"
+        :hide-discover-more="true"
+        title-string-path="pages.about.firstSection.title"
+        description-string-path="pages.about.firstSection.content"
+      />
     </v-container>
 
     <life-events-component
@@ -40,9 +31,10 @@
 <script>
 import PageHeader from '../components/layout/PageHeader.vue';
 import LifeEventsComponent from '../components/LifeEventsComponent.vue';
+import PresentationComponent from '../components/PresentationComponent.vue';
 
 export default {
-  components: { PageHeader, LifeEventsComponent },
+  components: { PageHeader, LifeEventsComponent, PresentationComponent },
   data() {
     return {
       items: [
