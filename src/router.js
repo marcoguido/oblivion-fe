@@ -29,7 +29,7 @@ export default new Router({
       component: () => import(/* webpackChunkName: "privacy-policy" */ './views/NotFound.vue'),
     },
   ],
-  scrollBehavior() {
-    return { x: 0, y: 0 };
-  },
+  // scrollBehavior() {
+  //   return { x: 0, y: 0 };
+  // },
 });
