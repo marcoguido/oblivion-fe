@@ -7,7 +7,7 @@
       <page-header
         page-title-translatable-key="pages.about.title"
         page-subtitle-translatable-key="pages.about.subtitle"
-        :header-image-src="require('@/assets/images/mario.png')"
+        :header-image-src="require('@/assets/images/mario16.png')"
       />
     </v-container>
 
