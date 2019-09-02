@@ -6,8 +6,7 @@
       v-if="!hideAuthorAvatar && ($vuetify.breakpoint.smAndDown || avatarLeft)"
       class="my-auto"
       cols="12"
-      md="4"
-      xl="2"
+      md="2"
     >
       <v-img
         alt="Author profile picture"
@@ -35,9 +34,9 @@
     </v-col>
 
     <v-col
+      class="mx-auto"
       cols="12"
-      :md="!hideAuthorAvatar ? 8 : 12"
-      :xl="!hideAuthorAvatar ? 10 : 12"
+      md="8"
     >
       <v-row>
         <v-col>
@@ -72,10 +71,9 @@
 
     <v-col
       v-if="!hideAuthorAvatar && (!$vuetify.breakpoint.smAndDown && !avatarLeft)"
-      class="my-auto"
+      class="ma-auto"
       cols="12"
-      md="4"
-      xl="2"
+      md="2"
     >
       <v-img
         alt="Author profile picture"
