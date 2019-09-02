@@ -36,7 +36,7 @@
               <div
                 class="card-title-text text-truncate flex-grow-1"
               >
-                {{ item.title }}
+                {{ $t(`${langKeysPrefix}.${item.slug}.title`) }}
               </div>
               <div
                 class="card-title-year flex-grow-0"
@@ -46,8 +46,8 @@
             </v-card-title>
             <v-card-text
               class="white black--text pa-5"
+              v-html="$t(`${langKeysPrefix}.${item.slug}.content`)"
             >
-              {{ item.content }}
             </v-card-text>
           </v-card>
         </span>
